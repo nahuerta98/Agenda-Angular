@@ -1,0 +1,68 @@
+<form>
+    <div class="form-group row">
+        <div class="col">
+            <label> Nombre: </label>
+            <input class="form-control" type="text" placeholder="Nombre" name="nombre" [(ngModel)]="newContact.nombre" required minlength="5"
+            [class.is-invalid]="nombre.invalid && nombre.touched" #nombre="ngModel">
+            <small class="form-text text-danger" *ngIf="nombre.invalid && nombre.touched"> Este campo es obligatorio. </small>
+
+        </div>
+        <div class="col">
+            <label> Apellido: </label>
+            <input class="form-control" type="text" placeholder="Apellido" name="apellido" [(ngModel)]="newContact.apellido" required minlength="5"
+            [class.is-invalid]="apellido.invalid && apellido.touched" #apellido="ngModel">
+            <small class="form-text text-danger" *ngIf="apellido.invalid && apellido.touched"> Este campo es obligatorio. </small>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label> Cumpleaños: </label>
+        <input class="form-control" type="date" name="cumple" [(ngModel)]="newContact.cumple" required 
+        [class.is-invalid]="cumple.invalid && cumple.touched" #cumple="ngModel">
+        <small class="form-text text-danger" *ngIf="cumple.invalid && cumple.touched"> Este campo es obligatorio para saber cuando comprarte un pastel. </small>
+
+    </div>
+
+    <div class="form-group row">
+        <div class="col">
+            <label> Dirección:</label>
+            <input class="form-control" type="text" placeholder="Calle" name="calle" [(ngModel)]="newContact.calle" required minlength="5"
+            [class.is-invalid]="calle.invalid && calle.touched" #calle="ngModel">
+            <small class="form-text text-danger" *ngIf="calle.invalid && calle.touched"> Llena este campo ¿ A dónde enviare mi regalo de navidad? </small>
+
+        </div>
+
+        <div class="col" style="margin-top: 2rem;">
+            <input class="form-control" type="text" placeholder="Núm." name="num" [(ngModel)]="newContact.num" required minlength="3"
+            [class.is-invalid]="num.invalid && num.touched" #num="ngModel">
+            <small class="form-text text-danger" *ngIf="num.invalid && num.touched"> Favor completo porfavor. </small>
+        </div>
+    </div>
+    <div class="form-group row ">
+        <div class="col">
+            <input class="form-control" type="text" placeholder="Colonia" name="colonia" [(ngModel)]="newContact.colonia" required minlength="5"
+            [class.is-invalid]="colonia.invalid && colonia.touched" #colonia="ngModel">
+            <small class="form-text text-danger" *ngIf="colonia.invalid && colonia.touched"> Llena este campo por que luego me pierdo si quiero ir a tu casa. </small>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col">
+            <label> Télefono: </label>
+            <input class="form-control" type="text" placeholder="Móvil" name="opMovil" [(ngModel)]="newContact.opMovil" required maxlength="10"
+            [class.is-invalid]="opMovil.invalid && opMovil.touched" #opMovil="ngModel">
+            <small class="form-text text-danger" *ngIf="opMovil.invalid && opMovil.touched"> Este campo es obligatorio. </small>
+        </div>
+
+        <div class="col" style="margin-top: 2rem;">
+            <input class="form-control" type="text" placeholder="Fijo (opcional) " name="opCasa" [(ngModel)]="newContact.opCasa">
+        </div>
+    </div>
+    <div class="form-group">
+        <label> Email: </label>
+        <input class="form-control" type="email" placeholder="example@example.com" name="email" [(ngModel)]="newContact.email" required
+        [class.is-invalid]="email.invalid && email.touched" #email="ngModel">
+        <small class="form-text text-danger" *ngIf="email.invalid && email.touched"> Este campo es obligatorio. </small>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block" (click)="addContact()"> Guardar </button>
+</form>

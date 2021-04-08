@@ -1,0 +1,21 @@
+.container{
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 15rem;
+
+    border: 1px solid lightgray;
+    background:url('https://storage.pixteller.com/designs/designs-images/2019-03-27/05/simple-background-backgrounds-passion-simple-1-5c9b95bd34713.png');
+    background-size: cover;
+
+    margin-bottom: 1rem;
+}
+.dot{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: lightgray;
+}

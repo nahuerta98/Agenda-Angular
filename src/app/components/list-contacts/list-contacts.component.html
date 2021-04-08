@@ -1,0 +1,40 @@
+<div class="container" *ngFor="let contact of myContacts">
+  <div class="row">
+    <div class="col-6" style="width: 100%; height: 100%; margin-top: 1.5rem; margin-left: 0.5rem;">
+      <img src="../../../assets/images/directorio-telefonico.png" style="width: 12rem; height: 12rem;">
+    </div>
+    <div class="col" style="margin-top: 2.5rem;padding: 0;">
+
+      <div class="row justify-content-center">
+        <h4> {{contact.nombre}} {{contact.apellido}} </h4>
+      </div>
+
+      <div class="row justify-content-center align-self-center">
+        <span>
+          {{contact.cumple}}
+        </span>
+      </div>
+
+      <div class="row">
+        <span> <div class="dot"></div> {{contact.calle}} {{contact.num}} </span>
+      </div>
+
+      <div class="row">
+        <span style="margin-left: 1rem;"> {{contact.colonia}} </span>
+      </div>
+
+      <div class="row">
+        <span> <div class="dot"></div> {{contact.opMovil}} / {{contact.opCasa}} </span>
+      </div>
+
+      <div class="row">
+        <span> <div class="dot"></div> {{contact.email}} </span>
+      </div>
+      <!--
+      <div class="row">
+        <div class="col justify-content-center"><button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal"> Editar </button></div>
+        <div class="col justify-content-center"><button type="button" class="btn btn-outline-secondary"> Borrar </button></div>
+      </div>-->
+    </div>
+  </div>
+</div>
